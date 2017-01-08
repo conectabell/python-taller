@@ -9,6 +9,7 @@ direccion = "217.160.132.34"
 
 def fromip(direccion):
     name, alias, addresslist = socket.gethostbyaddr(direccion)
+    #result = os.system("dig +noall +answer -x " + direccion)
     rev = reversename.from_address(direccion)
     #print "DnsLib: " + str(resolver.query(addr, "PTR")[0])
     print "Dirección IP: ", direccion
